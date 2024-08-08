@@ -1,0 +1,221 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: MrEavesModOT;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background-color-blue);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+:root {
+  --color-orange: #fc6a47;
+  --background-color-blue: #023047;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+}
+.logo-font {
+  font-family: Bigdino Park;
+  color: var(--color-orange);
+}
+
+.small {
+  font-size: 60px;
+  margin-left: 20px;
+}
+
+/* brings the content of the nav to center while filling the whole viewport width */
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+/* fills half the navigation and spaces the links evenly */
+.navigation-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+/* styles for the anchor tags in navigation */
+.navigation-container a {
+  flex-basis: auto;
+  color: var(--color-orange);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 25px;
+  width: 200px;
+  text-align: center;
+}
+
+/* styling the current page nav */
+.current {
+  color: #facd56 !important ;
+}
+
+/* first panel content */
+
+/* setting the width for the  two main components*/
+.ice-cream,
+.home {
+  width: 50vw;
+}
+/* making the image fill the container */
+.ice-cream img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home {
+  background-color: var(--background-color-blue);
+}
+.home-section {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* setting the welcome message container's position */
+.welcome-container {
+  position: absolute;
+  top: 15vh;
+  height: 65vh;
+  width: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 150px;
+}
+.welcome-container h2 {
+  color: var(--color-orange);
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.btn-buy {
+  margin-top: 15vh;
+  background-color: var(--color-orange);
+  border: none;
+  border-radius: 5px;
+  width: 230px;
+  height: 72px;
+  color: white;
+  font-size: 50px;
+}
+.btn-buy:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* setting up footer position */
+footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-line {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  margin-left: 30px;
+  padding-left: 20px;
+  border-left: 1px solid var(--color-orange);
+  font-size: 30px;
+  color: var(--color-orange);
+}
+
+.social-icons {
+  font-size: 64px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+.fa-twitter {
+  color: #4bbff8;
+}
+.fa-instagram-square {
+  color: #fa7049;
+}
+
+@media only screen and (max-width: 1000px) {
+  .logo-font {
+    font-size: 45px;
+  }
+
+  .welcome-container .logo-font {
+    font-size: 110px;
+  }
+
+  .welcome-container h2 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-color: var(--background-color-blue);
+  }
+  .navigation-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .logo-font {
+    text-align: center;
+  }
+
+  .welcome-container {
+    top: 12vh;
+  }
+  .welcome-container .logo-font {
+    font-size: 80px;
+    color: var(--background-color-blue);
+  }
+  .welcome-container h2 {
+    font-size: 35px;
+    color: var(--background-color-blue);
+  }
+  .btn-buy {
+    margin-top: 54vh;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .ice-cream,
+  .ice-cream img {
+    width: 100%;
+  }
+
+  footer {
+    background-color: var(--background-color-blue);
+  }
+  .fab {
+    font-size: 40px;
+  }
+
+  .phone-line {
+    height: 50px;
+  }
+
+  .welcome-container {
+    left: 25vw;
+  }
+}
